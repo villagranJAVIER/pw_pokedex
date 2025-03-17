@@ -149,10 +149,9 @@ onMounted(() => {
 
                     <!-- buttons -->
                     <div class="flex flex-wrap justify-start gap-0 my-6">
-                        <button v-for="type in types?.results" :key="type.name"
-                            :disabled="selectedType == type.name ? true : false" :class="[
-                                selectedType == type.name ? 'relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium cursor-not-allowed' : getRandomButtonStyle()
-                            ]" @click="getPokemons(type)">
+                        <button v-for="type in types?.results" :key="type.name" :class="[
+                            selectedType == type.name ? 'relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium' : getRandomButtonStyle()
+                        ]" @click="getPokemons(type)">
                             <span
                                 class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-transparent group-hover:dark:bg-transparent">
                                 {{ type.name }}
